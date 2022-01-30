@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <title>首页</title>
+  <style>
+    .carousel{
+      height: 500px;
+    }
+    .carousel-inner .item img{
+      height: 500px;
+      width: 100%;
+    }
+    .head{
+      position: absolute;
+      z-index: 1;
+      top:10px;
+      left: 0px;
+      right: 0px;
+    }
+    .dropdown-menu{
+      background-color: #333333;
+      color: #9d9d9d;
+    }
+    .navbar-right{
+      margin-right: 0px;
+    }
+  </style>
+</head>
+<body style="background-color: #d4d4d4">
+<!-- 导航栏 -->
+<div class="head">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">商品1</a></li>
+          <li><a href="#">商品2</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="register.html">注册</a></li>
+          <li><a href="login.html">登录</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">菜单<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" style="color: white">账号管理</a></li>
+              <li><a href="#" style="color: white">订单管理</a></li>
+              <li><a href="#" style="color: white">我的消息</a></li>
+              <li><a href="#" style="color: white">设置</a></li>
+            </ul>
+          </li>
+          <li>
+          <button class="btn btn-primary btn-lg"
+                  data-toggle="modal" data-target="#myModal"
+                  style="background-color: transparent;border-style: none;font-size: 5px!important;height: 50px">
+            反馈问题
+          </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- 轮播图 -->
+<div id="carousel-id" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+    <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+    <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item">
+      <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="../img/lb01.jpg" style="margin: auto;">
+    </div>
+    <div class="item">
+      <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="../img/lb02.jpg" style="margin: auto;">
+    </div>
+    <div class="item active">
+      <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="../img/lb03.jpg" style="margin: auto;">
+    </div>
+  </div>
+  <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<!--产品展示（四列布局）-->
+<div class="row">
+  <div class="col-md-3 col-xs-3">
+    <font face="楷体" size="5px">
+      宜家豪华大床
+    </font>
+    <br>
+    <img src="../img/SiLie01.jpg" width="100%" height="300px">
+    <br>
+    <a href="#" class="glyphicon glyphicon-thumbs-up">九种颜色可供选择</a>
+    <br>
+    <div style="background-color: #d58512;width: 100%;">
+      <font color="white" face="黑体" size="3px">
+        添加至购物车
+      </font>
+    </div>
+    <br>
+    <font face="黑体" size="4px">
+      爆款价1555￥
+    </font>
+  </div>
+  <div class="col-md-3 col-xs-3">
+    <font face="楷体" size="5px">
+      欧美进口桌具
+    </font>
+    <br>
+    <img src="../img/SiLie02.jpg" width="100%" height="300px">
+    <br>
+    <a href="#" class="glyphicon glyphicon-thumbs-up">多种尺寸可供选择</a>
+    <br>
+    <div style="background-color: #d58512;width: 100%;">
+      <font color="white" face="黑体" size="3px">
+        添加至购物车
+      </font>
+    </div>
+    <br>
+    <font face="黑体" size="4px">
+      爆款价955￥
+    </font>
+  </div>
+  <div class="col-md-3 col-xs-3">
+    <font face="楷体" size="5px">
+      北美奢侈品牌口红
+    </font>
+    <br>
+    <img src="../img/SiLie03.jpg" width="100%" height="300px">
+    <br>
+    <a href="#" class="glyphicon glyphicon-thumbs-up">多种色系可供选择</a>
+    <br>
+    <div style="background-color: #d58512;width: 100%;">
+      <font color="white" face="黑体" size="3px">
+        添加至购物车
+      </font>
+    </div>
+    <br>
+    <font face="黑体" size="4px">
+      爆款价5555￥
+    </font>
+  </div>
+  <div class="col-md-3 col-xs-3">
+    <font face="楷体" size="5px">
+      欧式2021客厅吊灯
+    </font>
+    <br>
+    <img src="../img/SiLie04.jpg" width="100%" height="300px">
+    <br>
+    <a href="#" class="glyphicon glyphicon-thumbs-up">支持免费运送安装</a>
+    <br>
+    <div style="background-color: #d58512;width: 100%;">
+      <font color="white" face="黑体" size="3px">
+        添加至购物车
+      </font>
+    </div>
+    <br>
+    <font face="黑体" size="4px">
+      爆款价2355￥
+    </font>
+  </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">请说出您的疑问：</h4>
+      </div>
+      <div class="modal-body">
+        <input type="" placeholder="在这里描述您的问题">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">提交</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+<!--标签页-->
+<div role="tabpanel" class="container" style="border: silver 1px solid; height: 200px; background-color: #9d9d9d">
+  <!-- Nav tabs -->
+  <div class="row">
+<!--    <img src="../img/title.jpg"  class="hidden-xs" style="width: 330px;" >-->
+    <ul class="nav nav-pills navbar-right" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab" >智能家具</a>
+      </li>
+      <li role="presentation">
+        <a href="#tab1" aria-controls="tab" role="tab" data-toggle="tab">电子产品</a>
+      </li>
+      <li role="presentation">
+        <a href="#tab2" aria-controls="tab" role="tab" data-toggle="tab">生活用品</a>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home" >
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1" >
+          <img src="../img/ZhiNeng01.jpg" style="width:165px; height:95px; ">
+          <h5>智能冰箱</h5>
+          <p>￥10000</p>
+        </div>
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/ZhiNeng02.jpg" style="width:165px; height:95px; ">
+          <h5>智能台灯</h5>
+          <p>￥100</p>
+        </div>
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/ZhiNeng03.jpg" style="width:165px; height:95px; ">
+          <h5>智能电脑桌</h5>
+          <p>￥1000</p>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="tab1">
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1" >
+          <img src="../img/DianZi11.jpg" style="width:165px; height:95px; ">
+          <h5>新一代苹果头戴式耳机</h5>
+          <p>￥4060</p>
+        </div>
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/DianZi12.jpg" style="width:165px; height:95px; ">
+          <h5>新一代索尼投影仪</h5>
+          <p>￥600</p>
+        </div>
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/DianZi13.jpg" style="width:165px; height:95px; ">
+          <h5>小米智能手机</h5>
+          <p>￥1960</p>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="tab2">
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/ShengHuo21.jpg" style="width:165px; height:95px; ">
+          <h5>竹叶本色卫生纸</h5>
+          <p>￥16.00</p>
+        </div>
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/ShengHuo22.jpg" style="width:165px; height:95px; ">
+          <h5>富光流行泡茶杯</h5>
+          <p>￥15.00</p>
+        </div>
+        <div class="col-xs-2 col-sm-4 col-md-2 col-lg-2 im1">
+          <img src="../img/ShengHuo23.jpg" style="width:165px; height:95px; ">
+          <h5>欧莱雅男士洗面奶</h5>
+          <p>￥26.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   <br>
+<!--底部版权信息-->
+<div style="background-color: #333333;height: 55px;line-height:55px;">
+  <div style="color: white; margin-left: 75px; float: left;">
+    MCR 2021 Bootstrap 微型购物网站 | 版权所有
+  </div>
+  <div style="color: white; margin-left: 755px;float: left;">
+    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 联系我们136666
+  </div>
+  <div style="color: white; margin-left: 85px;float: left;">
+    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 公司地址
+  </div>
+</div>
+</body>
+</html>
